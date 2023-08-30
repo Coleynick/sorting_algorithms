@@ -1,6 +1,4 @@
 #include "sort.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
 * insertion_sort_list - Sorts a doubly linked list of %d in ascension
@@ -22,7 +20,7 @@ void insertion_sort_list(listint_t **list)
 
 		while (prv != NULL && prv->n > curr->n)
 		{
-			prv->nxt = curr->nxt;
+			nxt = curr->nxt;
 			if (curr->nxt != NULL)
 				curr->nxt->prv = prv;
 			curr->nxt = prv;
